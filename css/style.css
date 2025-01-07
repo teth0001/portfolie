@@ -1,0 +1,584 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: ibm;
+  src: url(../fonts/ibmplexserif-regular-webfont.woff);
+}
+
+@font-face {
+  font-family: nigthy;
+  src: url(../fonts/nightydemo-webfont.woff);
+}
+
+@font-face {
+  font-family: nohemi;
+  src: url(../fonts/nohemi-bold-webfont.woff);
+}
+
+:root {
+  --yellow: #f1d682;
+  --green: #597853;
+  --black: #534a41;
+  --white: #f6f5d3;
+  --orange: #ffc073;
+}
+
+/*****FORSIDE****/
+
+body {
+  max-width: 950px;
+  margin: auto;
+  background-color: var(--yellow);
+}
+
+nav > ul li {
+  display: inline;
+}
+
+nav a:active {
+  color: var(--orange);
+}
+
+p {
+  font-family: ibm;
+  color: var(--white);
+  font-size: 1.2em;
+}
+
+h2 {
+  font-family: ibm;
+  color: var(--black);
+}
+
+.hero {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1fr 1fr;
+  height: 300px;
+}
+.logolink {
+  margin: auto;
+}
+
+.forsidebox {
+  max-width: 950px;
+  position: relative;
+  /* right: 150px; */
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.forsidebox a {
+  text-decoration: none;
+}
+
+.forsidebox a:hover {
+  transform: scale(1.02);
+}
+
+.portfoliobox {
+  border-radius: 25px 25px 25px 200px;
+}
+
+.aboutbox {
+  border-radius: 25px 200px 25px 25px;
+}
+
+h1 {
+  color: var(--white);
+  font-family: nigthy;
+}
+
+.headbox {
+  z-index: 999;
+  border-radius: 200px;
+  background-color: var(--yellow);
+  border: 15px double var(--green);
+}
+
+.spin {
+  animation: spin 8s linear infinite;
+}
+
+.rewind {
+  animation: rewind 2s ease-out backwards;
+}
+
+/********* OM MIG *********/
+
+.biotext {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+dl {
+  display: block;
+  width: 500px;
+  height: 200px;
+  line-height: 200%;
+  font-size: 1.25em;
+  color: var(--white);
+  margin-top: -3em;
+}
+
+dl div {
+  display: block;
+}
+
+div > dd,
+dt {
+  display: inline;
+}
+
+dd {
+  font-family: nohemi;
+  letter-spacing: 2px;
+}
+
+dt {
+  font-family: ibm;
+}
+
+.biobox2 {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+
+  background-color: var(--green);
+  border-radius: 25px 200px 25px 25px;
+}
+.biobox2 > h1 {
+  font-size: 3em;
+}
+
+.biobox3 {
+  gap: 0px;
+
+  background-color: var(--green);
+  border-radius: 25px 25px 200px 25px;
+}
+
+.biobox3 p {
+  color: var(--white);
+  letter-spacing: 1px;
+  line-height: 120%;
+  font-size: 1em;
+  padding: 0.5em;
+}
+
+.biobox3 ul {
+  margin-top: -1em;
+  list-style: circle;
+}
+
+.erfaring {
+  color: var(--white);
+  font-family: nigthy;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+}
+
+.biobox3 ul li {
+  display: block;
+  color: var(--white);
+  font-family: ibm;
+  font-size: 1em;
+}
+
+/*** PORTFOLIO ***/
+
+.temamenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 2em;
+}
+
+.temamenu > a {
+  position: relative;
+  background-color: var(--green);
+  border-radius: 100%;
+  animation: float ease 2s infinite;
+  text-decoration: none;
+}
+
+.temamenu > a > p {
+  font-family: nohemi;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 70px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  color: var(--black);
+}
+.temamenu > a:hover {
+  background-color: var(--orange);
+  transform: scale(1.1);
+}
+
+.temamenu > a:hover > p {
+  opacity: 1;
+}
+
+.temaer {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.temaer > div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 90%;
+  padding: 3em 3em 0 3em;
+  height: auto;
+  display: none;
+  transform: translateX(-50%);
+  background-color: var(--green);
+  margin-top: -5em;
+  border-radius: 200px 200px 25px 25px;
+  margin-bottom: 8em;
+}
+
+.activetext {
+  opacity: 1;
+}
+
+.temaer > div.active {
+  display: block;
+}
+
+.temaer > div > h1 {
+  text-align: center;
+}
+
+h3 {
+  font-family: ibm;
+  padding: 0 1em;
+  font-size: 1.3em;
+  color: var(--white);
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+.tema1 img {
+  width: 400px;
+  padding: 1em;
+}
+
+.textbox {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 1.5em;
+}
+
+.textbox h2 {
+  color: var(--white);
+  letter-spacing: 3px;
+
+  font-family: nohemi;
+  margin: auto;
+  margin-bottom: 0.5em;
+}
+
+.logop {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 9em;
+  height: 300px;
+}
+
+.knapbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.knap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+
+  font-family: nohemi;
+  text-decoration: none;
+  color: var(--black);
+  background-color: var(--orange);
+  border-radius: 50px;
+  padding: 0.5em 1em;
+  margin: 0.7em;
+}
+
+.knap:hover {
+  background-color: var(--yellow);
+  transform: scale(1.05);
+}
+
+.grid2_1 {
+  margin: auto;
+}
+
+.imgbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SPIL LAYOUT */
+
+.screen {
+  position: absolute;
+  top: -10%;
+  left: 10%;
+
+  overflow: hidden;
+}
+
+#game {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+#game_bg {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/klat1.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#game_elements {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+#cloth_container {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+}
+
+#cloth_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/cloth.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#start {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/klat1.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#game_ui {
+  position: absolute;
+  top: 2%;
+  left: 0;
+  padding: 1em;
+  font-family: nohemi;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+
+  letter-spacing: 2px;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+#infobox,
+#infobox2 {
+  position: absolute;
+  top: 2%;
+  left: 15%;
+  padding: 1em;
+  font-family: nohemi;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+
+  letter-spacing: 1px;
+  text-align: center;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+#next_btn,
+#start_btn {
+  position: absolute;
+  top: 45%;
+  left: 34%;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+  color: var(--white);
+
+  font-family: nohemi;
+
+  background-color: var(--black);
+}
+
+#next_btn:hover,
+#start_btn:hover {
+  color: var(--black);
+  background-color: var(--orange);
+  transform: scale(1.02);
+}
+
+#game_foreground {
+  pointer-events: none;
+}
+
+#mute {
+  position: absolute;
+  width: 10%;
+  aspect-ratio: 1/1;
+  left: 90%;
+  top: 65%;
+  background-image: url(../images/mute.svg);
+  background-size: contain;
+}
+
+#win {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/klat2.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hide {
+  display: none;
+}
+
+/* Positioner */
+
+.pos1 {
+  top: -40%;
+  left: 25%;
+}
+.pos2 {
+  top: -40%;
+  left: 35%;
+}
+.pos3 {
+  top: -40%;
+  left: 45%;
+}
+.pos4 {
+  top: -40%;
+  left: 55%;
+}
+
+/*** ANIMATIONS ***/
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rewind {
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    top: 0px;
+  }
+
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+/* SPIL ANIMATIONER */
+
+.fald {
+  animation-name: fald;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes fald {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 0 500%;
+  }
+}
+
+.forsvind {
+  animation: forsvind 2s 1;
+}
+
+.delay1 {
+  animation-delay: 0s;
+}
+.delay2 {
+  animation-delay: 0.4s;
+}
+.delay3 {
+  animation-delay: 0.7s;
+}
+.delay4 {
+  animation-delay: 1s;
+}
+
+@keyframes forsvind {
+  from {
+    opacity: 1;
+    rotate: 0deg;
+    scale: 1;
+  }
+  to {
+    opacity: 0;
+    rotate: 720deg;
+    scale: 0;
+  }
+}
+
+.frys {
+  animation-play-state: paused;
+}
+.skjul {
+  display: none;
+}

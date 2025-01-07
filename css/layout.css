@@ -1,0 +1,453 @@
+.portfoliobox,
+.aboutbox {
+  width: 500px;
+  height: 400px;
+  background-color: var(--green);
+  margin: 0.5em;
+}
+
+@media (min-width: 1001px) {
+  #burger-toggle {
+    display: none;
+  }
+  .burger-menu {
+    display: none;
+  }
+
+  nav ul {
+    width: 100%;
+    margin: auto;
+    display: inline-flex;
+    justify-content: space-evenly;
+    font-family: nohemi;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 0.5em;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--black);
+  }
+
+  nav a:hover {
+    color: var(--white);
+  }
+
+  .logo {
+    padding: 0.5em;
+    margin-top: 1em;
+    height: 180px;
+  }
+
+  .byline {
+    position: relative;
+    margin: 1em auto;
+    height: 50px;
+    width: 600px;
+    align-items: center;
+    font-size: 1em;
+  }
+
+  .navn {
+    font-size: 2em;
+    position: absolute;
+    left: 110px;
+  }
+
+  .job {
+    font-size: 2em;
+    position: absolute;
+    right: -50px;
+  }
+
+  .prik {
+    position: absolute;
+    left: 290px;
+    top: 18px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--green);
+  }
+
+  .byline h2,
+  div {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 4em;
+    letter-spacing: 2px;
+  }
+
+  .psmal {
+    display: none;
+  }
+
+  .aboutbox h1 {
+    position: relative;
+    top: 325px;
+    left: 210px;
+  }
+
+  .portfoliobox h1 {
+    position: relative;
+    top: 10px;
+    left: 30px;
+  }
+
+  .headbox {
+    position: absolute;
+    right: 335px;
+    top: 80px;
+    height: 250px;
+    width: 250px;
+  }
+
+  #head {
+    height: 200px;
+    position: relative;
+    left: 55px;
+    top: 25px;
+  }
+
+  /*** OM MIG ***/
+
+  .biobox {
+    position: relative;
+    max-width: 800px;
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .biobox2 {
+    height: 250px;
+    width: 500px;
+    padding: 1.5em;
+  }
+
+  .biobox3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 500px;
+    height: 400px;
+    margin-top: -4em;
+    padding: 1.5em;
+  }
+
+  .biobox3 ul {
+    grid-column: 1 / span 2;
+  }
+
+  .biobox3 > h1 {
+    font-size: 3em;
+    grid-column: 1 / 3;
+  }
+
+  span {
+    grid-column: 1 / 3;
+  }
+
+  .logohvid {
+    position: absolute;
+    height: 150px;
+    left: 550px;
+    top: 50px;
+  }
+
+  .portrait {
+    grid-column: 1;
+    height: 700px;
+    margin-right: 4em;
+  }
+
+  /*** PORTFOLIE ***/
+
+  .temamenu > a {
+    width: 100px;
+    height: 100px;
+  }
+
+  .screen {
+    height: 800px;
+    width: 800px;
+  }
+
+  #game_ui {
+    width: 25%;
+    font-size: 1em;
+  }
+
+  #infobox,
+  #infobox2 {
+    width: 55%;
+    font-size: 1.3em;
+  }
+
+  #next_btn,
+  #start_btn {
+    width: 20%;
+    font-size: 2em;
+  }
+
+  .grid2_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .knap {
+    width: 400px;
+    font-size: 2em;
+  }
+
+  .imgbox > video,
+  .imgbox > img {
+    max-width: 420px;
+    margin: 0.2em;
+    border-radius: 25px;
+  }
+
+  iframe {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+/*** LILLE SKÆRM ***/
+
+@media (max-width: 1000px) {
+  .burger-menu {
+    font-size: 4em;
+    cursor: pointer;
+    color: var(--black);
+    position: fixed;
+    right: 0;
+    padding-right: 20px;
+    top: 10px;
+    z-index: 888;
+  }
+
+  #burger-toggle {
+    display: none;
+  }
+
+  nav {
+    height: 45px;
+    padding: 10px;
+    width: 50%;
+    position: fixed;
+    z-index: 777;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 120px;
+    top: 80px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    text-align: right;
+    margin: 0;
+    padding: 1em;
+    border-radius: 25px 25px 25px 200px;
+    transition: max-height 0.5s ease-in-out;
+    background-color: var(--green);
+    font-size: 1.2em;
+    font-family: nohemi;
+  }
+
+  #burger-toggle:checked + label + nav ul {
+    position: fixed;
+    right: 28px;
+    line-height: 150%;
+    max-height: 800px;
+    width: 120px;
+    opacity: 1;
+    color: var(--white);
+  }
+
+  #burger-toggle:checked + label {
+    color: var(--orange);
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  nav a:hover {
+    color: var(--black);
+  }
+
+  .prik {
+    display: none;
+  }
+
+  .logo {
+    padding: 0.5em;
+    height: 150px;
+    margin-top: 4em;
+  }
+
+  .byline {
+    margin-top: 1em;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+  }
+
+  .forsidebox {
+    margin-top: 3em;
+  }
+
+  .portfoliobox,
+  .aboutbox {
+    min-width: 180px;
+  }
+
+  .pbred {
+    display: none;
+  }
+
+  h1 {
+    font-size: 3.5em;
+    letter-spacing: 1px;
+    line-height: 80%;
+  }
+
+  .aboutbox h1 {
+    position: relative;
+    top: 350px;
+    left: 15px;
+  }
+
+  .portfoliobox h1 {
+    position: relative;
+    top: 20px;
+    left: 15px;
+  }
+
+  .headbox {
+    position: fixed;
+    top: 80px;
+    left: -80px;
+    height: 120px;
+    width: 120px;
+  }
+
+  #head {
+    height: 90px;
+    position: relative;
+    right: -33px;
+    top: 12px;
+  }
+
+  /*** OM MIG ***/
+
+  .portrait {
+    grid-column: 1;
+    height: 500px;
+    margin-top: 10em;
+    position: fixed;
+    left: -100px;
+  }
+
+  .logohvid {
+    display: none;
+  }
+
+  .biobox {
+    position: relative;
+    margin: auto;
+    margin-top: -2em;
+    max-width: 800px;
+  }
+
+  .biobox2,
+  .biobox3 {
+    max-width: 260px;
+    margin: auto;
+    padding: 1.5em 2em;
+    /* margin-left: 6em; */
+    display: grid;
+  }
+
+  .biobox3 h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+  }
+
+  span {
+    margin: 0.5em 0;
+  }
+
+  .biobox3 ul {
+    margin-bottom: 2em;
+  }
+
+  .biobox3 {
+    line-height: 150%;
+    margin-top: -8em;
+    height: 700px;
+  }
+
+  /*** PORTFOLIO ***/
+
+  .temamenu > a {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    margin-top: 5em;
+  }
+
+  a > p {
+    font-size: 1em;
+    margin-top: -1em;
+  }
+
+  .screen {
+    height: 500px;
+    width: 400px;
+  }
+
+  #game_ui {
+    font-size: 1em;
+  }
+
+  #infobox,
+  #infobox2 {
+    font-size: 1em;
+    width: 300px;
+    height: 85px;
+  }
+
+  #next_btn,
+  #start_btn {
+    width: 60px;
+    height: 20px;
+    font-size: 1em;
+  }
+
+  .grid2_1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .knap {
+    width: 200px;
+    font-size: 1em;
+  }
+
+  .imgbox > video,
+  .imgbox > img {
+    max-width: 340px;
+    margin: 0.2em;
+    border-radius: 25px;
+  }
+
+  iframe {
+    width: 340px;
+    height: 260px;
+  }
+}
